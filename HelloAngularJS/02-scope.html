@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<!--
+4 - scope: comme en JS où les variables sont limitées par des fonctions, angular limite la portée
+des variables à des balises (certaines directives comme ng-app (rootScope), ng-repeat, ng-if...)
+-->
+<body ng-app>
+    <div>
+        Prénoms : <input ng-model="prenoms" ng-list>
+    </div>
+    <p ng-repeat="prenom in prenoms">
+        {{$index}} - Bonjour <span ng-bind="prenom"></span> !
+        <button ng-if="$last">-</button>
+    </p>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<!--
+1 - Directive: un attribut ou nom de balise qui masque du JS
+2 - Compilation: étape au chargement qui transforme les directives en JS
+3 - Data Binding / MVVM : synchro entre la vue et le modèle (si l'un change l'autre change)
+-->
+<body ng-app>
+    <div>
+        Prénom : <input ng-model="prenom">
+    </div>
+    <p>
+        Bonjour <span ng-bind="prenom"></span> !
+    </p>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
+</body>
+</html>
