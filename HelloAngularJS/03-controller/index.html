@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
     <title>Hello</title>
@@ -8,14 +8,16 @@
 4 - scope: comme en JS où les variables sont limitées par des fonctions, angular limite la portée
 des variables à des balises (certaines directives comme ng-app (rootScope), ng-repeat, ng-if...)
 -->
-<body ng-app>
+<body ng-controller="PrenomCtrl">
 <div>
-    Prénoms : <input ng-model="prenoms" ng-list>
+    Prénoms : <input ng-model="prenom">
+    <button ng-click="addPrenom()">+</button>
 </div>
-<p ng-repeat="prenom in prenoms">
+<p ng-repeat="prenom in prenoms track by $index">
     {{$index}} - Bonjour <span ng-bind="prenom"></span> !
-    <button ng-if="$last">-</button>
+    <button ng-click="removePrenom($index)">-</button>
 </p>
-<script src="node_modules/angular/angular.js"></script>
+<script src="../node_modules/angular/angular.js"></script>
+<script src="prenom.controller.js"></script>
 </body>
 </html>

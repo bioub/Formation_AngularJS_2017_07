@@ -19,7 +19,7 @@
         var inputElt = document.querySelector('.prenom');
         var spanElt = document.querySelector('.boite');
         inputElt.addEventListener('input', function hello(e) {
-          spanElt.innerText = e.target.value;
+          spanElt.innerHTML = e.target.value;
         });
       }());
     </script>
