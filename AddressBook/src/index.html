@@ -5,21 +5,18 @@
     <title>AddressBook</title>
 </head>
 <body>
-<nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
-            <span class="navbar-brand">AddressBook</span>
-        </div>
-        <ul class="nav navbar-nav">
-            <li>
-                <a ui-sref="contacts-list">Lister</a>
-            </li>
-            <li>
-                <a ui-sref="contacts-add">Ajouter</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<!--
+1 - Créer un composant top-bar avec juste un template
+tel que je puisse remplacer toute la navbar ci dessous
+par : <top-bar></top-bar>
+-->
+
+<!--
+2 - Créer un composant home-page avec juste un template
+3 - Importer le composant dans app.module et créer une route (url : '/')
+4 - Ajouter un lien dans le menu
+-->
+<top-bar></top-bar>
 <div class="container">
     <ui-view></ui-view>
 </div>
