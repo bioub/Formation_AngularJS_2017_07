@@ -26,6 +26,18 @@ module.exports = {
             }]]
           }
         }
+      },
+      {
+        test: /\.html$/,
+        use: 'raw-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          { loader: "style-loader/url" },
+          { loader: "file-loader" },
+          { loader: "postcss-loader" }
+        ]
       }
     ]
   }
