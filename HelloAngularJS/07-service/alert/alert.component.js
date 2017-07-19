@@ -13,6 +13,8 @@
     }
   }
 
+  AlertCtrl.$inject = ['alertService'];
+
   module.component('afAlert', {
       controller: AlertCtrl,
       templateUrl: './alert/alert.template.html'

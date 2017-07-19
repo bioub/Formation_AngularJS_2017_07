@@ -18,6 +18,8 @@
     };
   }
 
+  PrenomCtrl.$inject = ['alertService'];
+
   const module = angular.module('prenom.controller', [
     'alert.module',
   ]);
